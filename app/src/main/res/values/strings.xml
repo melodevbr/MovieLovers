@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MovieLovers</string>
+    <string name="list_movies_label">My movies</string>
+    <string name="add_new_movie_label">Add new movie</string>
+    <string name="autocomplete_movies_name">Type the movie\'s title</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movie_title">Title</string>
+    <string name="movie_rating">Rating</string>
+    <string name="movie_genre">Genre</string>
+    <string name="movie_director">Director</string>
+    <string name="movie_writer">Writer</string>
+    <string name="movie_actors">Actors</string>
+    <string name="movie_plot">Plot</string>
+    <string name="movie_language">Language</string>
+    <string name="movie_country">Country</string>
+    <string name="movie_awards">Awards</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_remove">Remove</string>
+    <string name="list_movies_title">My movies</string>
+    <string name="empty_movie_message">Hey! You need select a movie to save it in your collection</string>
+    <string name="ok_button">Ok</string>
+    <string name="remove_movie_message">Do you would like to remove this movie ?</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="empty_list_message">No movies here! Try add new one!</string>
+</resources>

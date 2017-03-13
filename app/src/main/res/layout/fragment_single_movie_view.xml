@@ -1,0 +1,108 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="presenter" type="biz.melo.movielovers.presenter.BasePresenter"/>
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/poster_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:paddingStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout style="@style/MovieFormGroup">
+                        <TextView style="@style/MovieFormLabel" android:text="@string/movie_title" />
+                        <TextView style="@style/MovieFormValue" android:text='@{String.format("%s (%s)", presenter.movie.title, presenter.movie.year)}'  />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/MovieFormGroup">
+                        <TextView style="@style/MovieFormLabel" android:text="@string/movie_rating" />
+                        <RatingBar
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:numStars="10"
+                            android:isIndicator="true"
+                            android:rating="@{Float.parseFloat(presenter.movie.imdbRating)}"
+                            android:max="10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/MovieFormGroup">
+                        <TextView style="@style/MovieFormLabel" android:text="@string/movie_genre" />
+                        <TextView style="@style/MovieFormValue" android:text='@{presenter.movie.genre}'  />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/MovieFormGroup">
+                        <TextView style="@style/MovieFormLabel" android:text="@string/movie_director" />
+                        <TextView style="@style/MovieFormValue" android:text='@{presenter.movie.director}'  />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout style="@style/MovieFormGroup">
+                    <TextView style="@style/MovieFormLabel" android:text="@string/movie_writer" />
+                    <TextView style="@style/MovieFormValue" android:text='@{presenter.movie.writer}'  />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MovieFormGroup">
+                    <TextView style="@style/MovieFormLabel" android:text="@string/movie_actors" />
+                    <TextView style="@style/MovieFormValue" android:text='@{presenter.movie.actors}'  />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MovieFormGroup">
+                    <TextView style="@style/MovieFormLabel" android:text="@string/movie_plot" />
+                    <TextView style="@style/MovieFormValue" android:text='@{presenter.movie.plot}'  />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MovieFormGroup">
+                    <TextView style="@style/MovieFormLabel" android:text="@string/movie_language" />
+                    <TextView style="@style/MovieFormValue" android:text='@{presenter.movie.language}'  />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MovieFormGroup">
+                    <TextView style="@style/MovieFormLabel" android:text="@string/movie_country" />
+                    <TextView style="@style/MovieFormValue" android:text='@{presenter.movie.country}'  />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MovieFormGroup">
+                    <TextView style="@style/MovieFormLabel" android:text="@string/movie_awards" />
+                    <TextView style="@style/MovieFormValue" android:text='@{presenter.movie.awards}'  />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>
