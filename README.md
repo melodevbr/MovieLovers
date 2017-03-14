@@ -13,5 +13,6 @@ This app is for movie lovers, search your movies and save locally in your app.
 - Picasso
 - Retrofit
 - RxJava
+- Butter Knife
 
 Made with :heart: by Hotaviano Melo
